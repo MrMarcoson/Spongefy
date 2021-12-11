@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+.col-1 {width: 16.66%;}
+.col-2 {width: 33.33%;}
+.col-3 {width: 50%;}
+.col-4 {width: 66.66%;}
+.col-5 {width: 83.33%;}
+.col-6 {width: 100%;}
+
+[class*="col-"] {
+  float: left;
+  padding: 10px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  margin-bottom: 4px;
+}
+
+@media only screen and (max-width: 768px) {
+
+[class*="col-"] {
+    width: 100%;
+}
+  
+.col-1 {
+    display: none;	
+}
+  
+.menu {
+    min-height: 0px;
+}
+
+.mid {
+  min-height: 0px;
+}
+
+}
+
+
+body{
+    
+    font-family: "Lucida Sans Unicode";
+    margin:0;
+    padding: 0;
+    background-color: #000000;
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url("bg.jpg");
+    background-size: cover;
+	background-attachment: fixed;
+}
+
+.top{
+    
+    font-size: 4vw;
+    background-color: rgb(255, 255, 255, .6);
+    padding: 10px;
+    color: black;
+    text-align: center;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
+
+
+.mid{
+    
+    padding: 30px;
+    float: left;
+    display: block;
+    background-color: rgb(255, 255, 255, .6);
+    min-height: 600px;
+    
+}
+
+.bot{
+    
+    font-size: 1vw;
+    color: white;
+    padding: 10px;
+    text-align: right;
+    display: block;
+    margin-top: 30px;
+    
+}
+
+input{
+    
+    min-height: 200px;
+    padding:0 5px;
+    width: 70%;
+    font-size: 20px;
+    resize: none;
+    
+}
+
+p{
+    
+    width: 70%;
+    color: black;
+    font-size: 32px;
+    text-align: justify;
+
+}
+
+textarea{
+    
+    width: 80%;
+    min-height: 200px;
+    
+}
+
+button{
+    
+    width: 20%;
+    font-size: 1.4vw;
+    padding: 10px;
+    
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img.png" type="image/x-icon">
+    <title>sPoNgE</title>
+    
+    <script>
+        
+            
+        function spongify()
+            {
+                
+                var str = document.getElementById("myText").value;
+                var translated = "";
+                var TEMP = "";
+                var counter = 0;
+                
+                for (let i = 0; i < str.length; i++) {
+                    
+                    
+                    if(counter%2==1)
+                        {
+                            
+                          TEMP = str[i];
+                          TEMP = TEMP.toUpperCase();
+                          
+                        }
+                    
+                    if(counter%2==0)
+                        {
+                            
+                          TEMP = str[i];
+                          TEMP = TEMP.toLowerCase();
+ 
+                        }
+                    
+                    translated += TEMP;
+                    
+                    counter++;
+                    
+                }
+                
+                
+                document.getElementById("back").innerHTML = translated;
+                
+            }
+            
+            
+            
+            
+            
+            
+        
+        
+        
+        </script>
+    
+    
+    
+</head>
+    
+    <body>
+   
+        
+        
+        <div class="row">
+            
+            <div class="top col-6">i dOnT HaVe tImE To wRiTe tHiS By mYsElF</div>
+            
+        </div>
+
+        
+        <div class="row">
+        
+            <div class="col-1"></div>
+            
+            <div class="mid col-4">
+                
+                <center>
+                <textarea id="myText" rows="10" cols="70"></textarea>
+                <br>
+                <button onclick="spongify()">TRANSLATE</button>
+                <br>
+                <p id="back"></p>
+                </center>
+                
+            </div>
+            
+            <div class="col-1"></div>
+            
+        </div>
+        
+        <div class="row">
+            
+            <div class="bot col-6">Made by: MgrMarcoson</div>
+            
+        </div>
+        
+        
+
+    
+    </body>
+</html>
