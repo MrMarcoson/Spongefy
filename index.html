@@ -11,51 +11,34 @@
         
             
         function spongify()
-            {
+        {
+            var str = document.getElementById("myText").value;
+            var translated = "";
+            var TEMP = "";
+            var counter = 0;
+            
+            for (let i = 0; i < str.length; i++) {
                 
-                var str = document.getElementById("myText").value;
-                var translated = "";
-                var TEMP = "";
-                var counter = 0;
-                
-                for (let i = 0; i < str.length; i++) {
-                    
-                    
-                    if(counter%2==1)
-                        {
-                            
-                          TEMP = str[i];
-                          TEMP = TEMP.toUpperCase();
-                          
-                        }
-                    
-                    if(counter%2==0)
-                        {
-                            
-                          TEMP = str[i];
-                          TEMP = TEMP.toLowerCase();
- 
-                        }
-                    
-                    translated += TEMP;
-                    
-                    counter++;
-                    
+                if(counter%2==1)
+                {
+                    TEMP = str[i];
+                    TEMP = TEMP.toUpperCase();
                 }
                 
+                if(counter%2==0)
+                {
+                    TEMP = str[i];
+                    TEMP = TEMP.toLowerCase();
+                }
                 
-                document.getElementById("back").innerHTML = translated;
-                
+                translated += TEMP;
+                counter++; 
             }
             
+            document.getElementById("back").innerHTML = translated;
+        }
             
             
-            
-            
-            
-        
-        
-        
         </script>
     
     
@@ -64,8 +47,6 @@
     
     <body>
    
-        
-        
         <div class="row">
             
             <div class="top col-6">i dOnT HaVe tImE To wRiTe tHiS By mYsElF</div>
@@ -95,7 +76,7 @@
         
         <div class="row">
             
-            <div class="bot col-6">Made by: MgrMarcoson</div>
+            <div class="bot col-6">Made by: MgrMarcoson 2019</div>
             
         </div>
         
